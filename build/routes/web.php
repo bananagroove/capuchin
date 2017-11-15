@@ -11,6 +11,11 @@
 |
 */
 
-$router->get('/', function () use ($router) {
-    return $router->app->version();
+define('TITLE_PREFIX', 'Capuchin | ');
+
+$router->get('/', function (){
+    return view('home', [
+        'title' => TITLE_PREFIX.'Home',
+        'description' => ''
+    ]);
 });
